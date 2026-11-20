@@ -33,9 +33,13 @@ make predictions.
 ``` text
 fake-news-detector/
 │
-├── app.py              # Main Streamlit application
-├── README.md           # Project documentation
-└── requirements.txt    # Python dependencies (if included)
+├── app.py                            # Main Streamlit application
+├── combine.py
+├── README.md                         # Project documentation
+├── requirements.txt                  # Python dependencies (if included)
+├── True.csv                          # True.csv and False.csv can on any similar topic
+├── Fake.csv
+└── news_dataset                      # Your dataset related to True.csv and False.csv to train the modal
 ```
 
 If your project uses additional Python files or datasets, add them to
