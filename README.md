@@ -33,9 +33,13 @@ make predictions.
 ``` text
 fake-news-detector/
 │
-├── app.py              # Main Streamlit application
-├── README.md           # Project documentation
-└── requirements.txt    # Python dependencies (if included)
+├── app.py                            # Main Streamlit application
+├── combine.py
+├── README.md                         # Project documentation
+├── requirements.txt                  # Python dependencies (if included)
+├── True.csv                          # True.csv and False.csv can on any similar topic
+├── Fake.csv
+└── news_dataset                      # Your dataset related to True.csv and False.csv to train the modal
 ```
 
 If your project uses additional Python files or datasets, add them to
@@ -54,7 +58,7 @@ During installation on Windows, enable **Add Python to PATH**.
 ### 2. Download or clone the repository
 
 ``` bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/yaghyprakash/Fake-News-Detector
 cd fake-news-detector
 ```
 
@@ -143,12 +147,16 @@ preprocessing, train-test split, and model configuration.
 No fixed accuracy is claimed in this README. Run the application or
 evaluation code on your dataset and report the measured results here.
 
-  Metric      Result
-  ----------- ---------------------
-  Accuracy    Add measured result
-  Precision   Add measured result
-  Recall      Add measured result
-  F1-score    Add measured result
+Result from the news_dataset.csv
+
+|             precision    recall  f1-score   support|
+
+  fake       0.98          0.97      0.98      3459
+  real       0.98          0.99      0.98      4238
+--------------------------------------------------------
+accuracy                               0.98      7697
+macro avg          0.98      0.98      0.98      7697
+weighted avg       0.98      0.98      0.98      7697
 
 ## Limitations
 
